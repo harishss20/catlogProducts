@@ -17,10 +17,10 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Submitting form data:", formData);
 
-    // Send the form data to the backend
     try {
-      const response = await fetch("http://localhost:5000/api/form", {
+      const response = await fetch("http://localhost:3535/api/form/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,6 +29,12 @@ const Form = () => {
       });
       const result = await response.json();
       console.log("Success:", result);
+
+      setFormData({
+        username: "",
+        phoneNumber: "",
+        location: "",
+      });
     } catch (error) {
       console.error("Error:", error);
     }
@@ -84,7 +90,7 @@ const Form = () => {
             className="block text-left text-gray-700 font-medium"
             htmlFor="location"
           >
-            Location
+            Pincode
           </label>
           <input
             type="text"

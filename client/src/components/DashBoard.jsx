@@ -37,7 +37,6 @@ const DashBoard = () => {
         throw new Error("Failed to clear users");
       }
 
-      // If successful, clear the user state
       setUser([]);
     } catch (err) {
       setError(err.message);

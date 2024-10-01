@@ -41,17 +41,17 @@ const Form = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen ">
+    <div className="flex items-center justify-center min-h-screen">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md "
+        className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md"
       >
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+        <h2 className="text-2xl font-Madimi text-center text-gray-800 mb-6">
           Enter Your Details
         </h2>
         <div className="mb-5">
           <label
-            className="block text-left text-gray-700 font-medium"
+            className="block text-left text-gray-700 font-Madimi"
             htmlFor="username"
           >
             Name
@@ -62,14 +62,14 @@ const Form = () => {
             name="username"
             value={formData.username}
             onChange={handleChange}
-            className="w-full mt-2 p-3 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
+            className="w-full mt-2 p-3 text-gray-700 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
             placeholder="Enter your username"
             required
           />
         </div>
         <div className="mb-5">
           <label
-            className=" text-left block text-gray-700 font-medium"
+            className="text-left block text-gray-700 font-Madimi"
             htmlFor="phoneNumber"
           >
             Phone Number
@@ -80,14 +80,14 @@ const Form = () => {
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
-            className="w-full mt-2 p-3 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
+            className="w-full mt-2 p-3 text-gray-700 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
             placeholder="Enter your phone number"
             required
           />
         </div>
         <div className="mb-6">
           <label
-            className="block text-left text-gray-700 font-medium"
+            className="block text-left text-gray-700 font-Madimi"
             htmlFor="location"
           >
             Pincode
@@ -98,14 +98,14 @@ const Form = () => {
             name="location"
             value={formData.location}
             onChange={handleChange}
-            className="w-full mt-2 p-3 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
+            className="w-full mt-2 p-3 text-gray-700 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
             placeholder="Enter your location"
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full py-3 bg-blue-500 text-white font-Madimi rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
           Submit
         </button>

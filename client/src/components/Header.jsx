@@ -35,21 +35,21 @@ const Header = () => {
         </motion.h1>
       </div>
       <div>
-        <p class="text-lg font-normal text-gray-900 lg:text-xl dark:text-gray-600">
-          <strong class="text-red-500 font-Madimi">DoorBag </strong>
-          <span class="font-semibold">
+        <p className="text-lg font-normal text-gray-900 lg:text-xl dark:text-gray-600">
+          <strong className="text-red-500 font-Madimi">DoorBag </strong>
+          <span className="font-semibold">
             க்கு உங்களை அன்புடன் வரவேற்கிறோம். எங்கள் சேவைகளை பயன்படுத்த
             விரும்பினால், கீழே உள்ள பட்டனை கிளிக் செய்யவும்.
           </span>
         </p>
         <br />
         <button
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-Madimi text-center text-white cursor-pointer bg-blue-700 rounded-lg hover:bg-blue-800 "
+          className="inline-flex items-center justify-center px-5 py-3 text-base font-Madimi text-center text-white cursor-pointer bg-blue-700 rounded-lg hover:bg-blue-800 "
           onClick={handleClick}
         >
           Request
           <svg
-            class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -7,8 +7,9 @@ const app = express();
 const port = process.env.PORT || 3535;
 
 connectDb();
-app.use(cors()); // Enable CORS
-app.use(express.json()); // Parse JSON bodies
+app.use(cors());
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("message:welcome to backend");
 });

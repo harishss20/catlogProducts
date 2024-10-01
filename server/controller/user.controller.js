@@ -23,3 +23,12 @@ export const submitUserForm = async (req, res) => {
     return res.status(400).json({ message: err.message });
   }
 };
+
+export const getAllUser = async (req, res) => {
+  try {
+    const allUser = await UserForm.find();
+    return res.status(200).json(allUser);
+  } catch (err) {
+    return res.status(404).json({ message: err.message });
+  }
+};

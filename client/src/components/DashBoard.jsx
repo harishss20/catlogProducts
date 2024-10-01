@@ -23,35 +23,71 @@ const DashBoard = () => {
     fetchUser();
   }, []);
 
+  const handleClear = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3535/api/form/submit", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to clear users");
+      }
+
+      // If successful, clear the user state
+      setUser([]);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
   if (loading) {
     return <div className="text-center"> Loading...</div>;
   }
   if (error) {
-    return <div className="text-red-500"> Error:{error}</div>;
+    return <div className="text-red-500"> Error: {error}</div>;
   }
   return (
     <div className="text-gray-700 p-4">
-      <h1 className="font-bold text-2xl mb-4">DashBoard</h1>
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-lg">
-          <thead>
-            <tr>
-              <th className="py-2 px-4 bg-gray-200">UserName</th>
-              <th className="py-2 px-4 bg-gray-200">PhoneNumber</th>
-              <th className="py-2 px-4 bg-gray-200">Location</th>
-            </tr>
-          </thead>
-          <tbody>
-            {user.map((u) => (
-              <tr key={u._id} className="border-b">
-                <td className="py-2 px-4 border">{u.username}</td>
-                <td className="py-2 px-4 border">{u.phoneNumber}</td>
-                <td className="py-2 px-4 border">{u.location}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="flex">
+        <h1 className="flex-grow pl-16 font-Madimi text-2xl mb-6">DashBoard</h1>
+        <button
+          className="flex-none text-white bg-blue-600 h-12 font-Madimi text-center"
+          onClick={handleClear}
+        >
+          clear
+        </button>
       </div>
+      <br />
+      {user.length === 0 ? (
+        <h1 className="mt-32 font-Madimi"> User Detail is Not available</h1>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white shadow-md rounded-lg">
+            <thead>
+              <tr>
+                <th className="font-Madimi py-2 px-4 bg-gray-200">UserName</th>
+                <th className="font-Madimi py-2 px-4 bg-gray-200">
+                  PhoneNumber
+                </th>
+                <th className="font-Madimi py-2 px-4 bg-gray-200">Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              {user.map((u) => (
+                <tr key={u._id} className="border-b">
+                  <td className="py-2 px-4 border">{u.username}</td>
+                  <td className="py-2 px-4 border">{u.phoneNumber}</td>
+                  <td className="py-2 px-4 border">{u.location}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

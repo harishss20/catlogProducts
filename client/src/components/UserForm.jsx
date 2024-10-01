@@ -7,6 +7,37 @@ const Form = () => {
     location: "",
   });
 
+  const [errors, setErrors] = useState({
+    username: "",
+    phoneNumber: "",
+    location: "",
+  });
+
+  const validate = () => {
+    let formIsValid = true;
+    let newErrors = {};
+
+    if (!formData.username.trim()) {
+      newErrors.username = "Username is required";
+      formIsValid = false;
+    }
+
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!formData.phoneNumber.match(phoneRegex)) {
+      newErrors.phoneNumber = "Please enter a valid 10-digit phone number";
+      formIsValid = false;
+    }
+
+    const locationRegex = /^[0-9]{6}$/;
+    if (!formData.location.match(locationRegex)) {
+      newErrors.location = "Location must be a 6-digit pincode";
+      formIsValid = false;
+    }
+
+    setErrors(newErrors);
+    return formIsValid;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,26 +48,37 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitting form data:", formData);
 
-    try {
-      const response = await fetch("http://localhost:3535/api/form/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      console.log("Success:", result);
+    if (validate()) {
+      console.log("Submitting form data:", formData);
 
-      setFormData({
-        username: "",
-        phoneNumber: "",
-        location: "",
-      });
-    } catch (error) {
-      console.error("Error:", error);
+      try {
+        const response = await fetch("http://localhost:3535/api/form/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+        const result = await response.json();
+        console.log("Success:", result);
+
+        setFormData({
+          username: "",
+          phoneNumber: "",
+          location: "",
+        });
+
+        setErrors({
+          username: "",
+          phoneNumber: "",
+          location: "",
+        });
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    } else {
+      console.log("Form validation failed. Please correct the errors.");
     }
   };
 
@@ -49,6 +91,7 @@ const Form = () => {
         <h2 className="text-2xl font-Madimi text-center text-gray-800 mb-6">
           Enter Your Details
         </h2>
+
         <div className="mb-5">
           <label
             className="block text-left text-gray-700 font-Madimi"
@@ -66,7 +109,11 @@ const Form = () => {
             placeholder="Enter your username"
             required
           />
+          {errors.username && (
+            <p className="text-red-500 mt-1">{errors.username}</p>
+          )}
         </div>
+
         <div className="mb-5">
           <label
             className="text-left block text-gray-700 font-Madimi"
@@ -84,7 +131,11 @@ const Form = () => {
             placeholder="Enter your phone number"
             required
           />
+          {errors.phoneNumber && (
+            <p className="text-red-500 mt-1">{errors.phoneNumber}</p>
+          )}
         </div>
+
         <div className="mb-6">
           <label
             className="block text-left text-gray-700 font-Madimi"
@@ -102,7 +153,11 @@ const Form = () => {
             placeholder="Enter your location"
             required
           />
+          {errors.location && (
+            <p className="text-red-500 mt-1">{errors.location}</p>
+          )}
         </div>
+
         <button
           type="submit"
           className="w-full py-3 bg-blue-500 text-white font-Madimi rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 const DashBoard = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -38,6 +38,7 @@ const DashBoard = () => {
       }
 
       setUser([]);
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }

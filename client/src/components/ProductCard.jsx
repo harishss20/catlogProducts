@@ -25,11 +25,19 @@ export default function ProductList() {
   }, []);
 
   if (loading) {
-    return <div className="text-center">Loading...</div>;
+    return (
+      <div className="text-center text-gray-700 font-Madimi mt-8">
+        Loading...
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="text-red-500">Error: {error}</div>;
+    return (
+      <div className="text-red-500 text-gray-700 font-Madimi">
+        Error: {error}
+      </div>
+    );
   }
 
   return (

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const Form = () => {
   const [formData, setFormData] = useState({
     username: "",
     phoneNumber: "",
     location: "",
   });
-
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({
     username: "",
     phoneNumber: "",
@@ -74,6 +74,8 @@ const Form = () => {
           phoneNumber: "",
           location: "",
         });
+
+        navigate("/");
       } catch (error) {
         console.error("Error:", error);
       }

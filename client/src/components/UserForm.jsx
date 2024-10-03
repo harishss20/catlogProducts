@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 const Form = () => {
   const [formData, setFormData] = useState({
     username: "",
     phoneNumber: "",
     location: "",
+    address: "",
   });
+
   const navigate = useNavigate();
+
   const [errors, setErrors] = useState({
     username: "",
     phoneNumber: "",
     location: "",
+    address: "",
   });
 
   const validate = () => {
@@ -31,6 +36,11 @@ const Form = () => {
     const locationRegex = /^[0-9]{6}$/;
     if (!formData.location.match(locationRegex)) {
       newErrors.location = "Location must be a 6-digit pincode";
+      formIsValid = false;
+    }
+
+    if (!formData.address.trim()) {
+      newErrors.address = "Address is required";
       formIsValid = false;
     }
 
@@ -67,12 +77,14 @@ const Form = () => {
           username: "",
           phoneNumber: "",
           location: "",
+          address: "",
         });
 
         setErrors({
           username: "",
           phoneNumber: "",
           location: "",
+          address: "",
         });
 
         navigate("/");
@@ -118,7 +130,7 @@ const Form = () => {
 
         <div className="mb-5">
           <label
-            className="text-left block text-gray-700 font-Madimi"
+            className="block text-left text-gray-700 font-Madimi"
             htmlFor="phoneNumber"
           >
             Phone Number
@@ -138,7 +150,7 @@ const Form = () => {
           )}
         </div>
 
-        <div className="mb-6">
+        <div className="mb-5">
           <label
             className="block text-left text-gray-700 font-Madimi"
             htmlFor="location"
@@ -157,6 +169,28 @@ const Form = () => {
           />
           {errors.location && (
             <p className="text-red-500 mt-1">{errors.location}</p>
+          )}
+        </div>
+
+        <div className="mb-6">
+          <label
+            className="block text-left text-gray-700 font-Madimi"
+            htmlFor="address"
+          >
+            Address
+          </label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            className="w-full mt-2 p-3 text-gray-700 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
+            placeholder="Enter your address"
+            required
+          />
+          {errors.address && (
+            <p className="text-red-500 mt-1">{errors.address}</p>
           )}
         </div>
 

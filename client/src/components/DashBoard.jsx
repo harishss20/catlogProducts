@@ -43,6 +43,9 @@ const DashBoard = () => {
       setError(err.message);
     }
   };
+  const handleHome = () => {
+    navigate("/");
+  };
 
   if (loading) {
     return <div className="text-center"> Loading...</div>;
@@ -55,7 +58,13 @@ const DashBoard = () => {
       <div className="flex">
         <h1 className="flex-grow pl-16 font-Madimi text-2xl mb-6">DashBoard</h1>
         <button
-          className="flex-none text-white bg-blue-600 h-12 font-Madimi text-center"
+          className="flex-none ml-4 text-white bg-blue-600 h-12 font-Madimi text-center"
+          onClick={handleHome}
+        >
+          Home
+        </button>
+        <button
+          className="flex-none ml-6 text-white bg-blue-600 h-12 font-Madimi text-center"
           onClick={handleClear}
         >
           clear
@@ -73,6 +82,7 @@ const DashBoard = () => {
                 <th className="font-Madimi py-2 px-4 bg-gray-200">
                   PhoneNumber
                 </th>
+                <th className="font-Madimi py-2 px-4 bg-gray-200">Address</th>
                 <th className="font-Madimi py-2 px-4 bg-gray-200">Location</th>
               </tr>
             </thead>
@@ -81,6 +91,7 @@ const DashBoard = () => {
                 <tr key={u._id} className="border-b">
                   <td className="py-2 px-4 border">{u.username}</td>
                   <td className="py-2 px-4 border">{u.phoneNumber}</td>
+                  <td className="py-2 px-4 border">{u.address}</td>
                   <td className="py-2 px-4 border">{u.location}</td>
                 </tr>
               ))}

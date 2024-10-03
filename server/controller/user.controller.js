@@ -2,7 +2,7 @@ import UserForm from "../model/user.model.js";
 
 export const submitUserForm = async (req, res) => {
   try {
-    const { username, phoneNumber, location } = req.body;
+    const { username, phoneNumber, location, address } = req.body;
 
     if (!username || !phoneNumber || !location) {
       return res.status(400).json({ message: "All fields are required" });
@@ -11,6 +11,7 @@ export const submitUserForm = async (req, res) => {
       username,
       phoneNumber,
       location,
+      address,
     });
 
     await newUserForm.save();

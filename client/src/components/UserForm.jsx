@@ -150,28 +150,6 @@ const Form = () => {
           )}
         </div>
 
-        <div className="mb-5">
-          <label
-            className="block text-left text-gray-700 font-Madimi"
-            htmlFor="location"
-          >
-            Pincode
-          </label>
-          <input
-            type="text"
-            id="location"
-            name="location"
-            value={formData.location}
-            onChange={handleChange}
-            className="w-full mt-2 p-3 text-gray-700 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
-            placeholder="Enter your location"
-            required
-          />
-          {errors.location && (
-            <p className="text-red-500 mt-1">{errors.location}</p>
-          )}
-        </div>
-
         <div className="mb-6">
           <label
             className="block text-left text-gray-700 font-Madimi"
@@ -191,6 +169,28 @@ const Form = () => {
           />
           {errors.address && (
             <p className="text-red-500 mt-1">{errors.address}</p>
+          )}
+        </div>
+
+        <div className="mb-5">
+          <label
+            className="block text-left text-gray-700 font-Madimi"
+            htmlFor="location"
+          >
+            Pincode
+          </label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            className="w-full mt-2 p-3 text-gray-700 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-100"
+            placeholder="Enter your location"
+            required
+          />
+          {errors.location && (
+            <p className="text-red-500 mt-1">{errors.location}</p>
           )}
         </div>
 

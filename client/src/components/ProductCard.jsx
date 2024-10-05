@@ -58,9 +58,11 @@ export default function ProductList() {
               <h3 className="text-lg font-Madimi text-gray-800">
                 {product.name}
               </h3>
-              <p className="text-red-600 font-bold">
-                Price: <span className="font-bold">₹ </span>
-                {product.price}
+              <p className="text-black font-Madimi">
+                Price:
+                <span className="font-bold text-red-500">
+                  {" " + "₹"} {product.price}{" "}
+                </span>
               </p>
             </div>
           </div>

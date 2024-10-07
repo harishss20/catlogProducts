@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Set the alias for the src directory
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   build: {
-    outDir: "dist", // Specify the output directory for the build
-    sourcemap: false, // Disable sourcemaps
+    outDir: "dist",
+    sourcemap: false,
   },
 });

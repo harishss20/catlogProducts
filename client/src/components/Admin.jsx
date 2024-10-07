@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { API_URL } from "./Api/BeApi";
 
 const AdminLogin = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +24,10 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(API_URL + "/api/admin/login", formData);
+      const res = await axios.post(
+        import.meta.env.VITE_API_URL + "/api/admin/login",
+        formData
+      );
       localStorage.setItem("token", res.data.token);
       navigate("/dashBoard");
     } catch (err) {

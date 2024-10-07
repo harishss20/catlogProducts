@@ -12,7 +12,7 @@ connectDb();
 
 app.use(
   cors({
-    origin: "https://nandha-kumar-milk-agency.onrender.com",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );

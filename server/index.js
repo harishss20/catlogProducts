@@ -8,7 +8,14 @@ const app = express();
 const port = process.env.PORT || 3535;
 
 connectDb();
-app.use(cors());
+
+//front-end-connect
+app.use(
+  cors({
+    origin: ["https://nandha-kumar-milk-agency.onrender.com/"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {

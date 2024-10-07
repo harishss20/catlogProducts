@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { API_URL } from "./Api/BeApi";
 export default function ProductList() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -8,7 +8,7 @@ export default function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3535/api/products");
+        const response = await fetch(API_URL + "/api/products");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

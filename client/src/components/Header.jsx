@@ -36,7 +36,9 @@ const Header = () => {
       </div>
       <div>
         <p className="text-lg font-normal text-gray-900 lg:text-xl dark:text-gray-600">
-          <strong className="text-red-500 font-Madimi">DoorBag </strong>
+          <strong className="text-red-500 font-bold">
+            NandhaKumar Milk Agancy{" "}
+          </strong>
           <span className="font-semibold">
             க்கு உங்களை அன்புடன் வரவேற்கிறோம். எங்கள் சேவைகளை பயன்படுத்த
             விரும்பினால், கீழே உள்ள பட்டனை கிளிக் செய்யவும்.

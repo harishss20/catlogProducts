@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "./Api/BeApi";
 const DashBoard = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -8,7 +9,7 @@ const DashBoard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch("http://localhost:3535/api/form/submit");
+        const response = await fetch(API_URL + "/api/form/submit");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -26,7 +27,7 @@ const DashBoard = () => {
   const handleClear = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3535/api/form/submit", {
+      const response = await fetch(API_URL + "/api/form/submit", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

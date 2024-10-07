@@ -10,4 +10,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"), // Set the alias for the src directory
     },
   },
+  build: {
+    outDir: "dist", // Specify the output directory for the build
+    sourcemap: false, // Disable sourcemaps
+  },
 });

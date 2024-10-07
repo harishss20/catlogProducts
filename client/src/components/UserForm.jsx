@@ -63,13 +63,16 @@ const Form = () => {
       console.log("Submitting form data:", formData);
 
       try {
-        const response = await fetch("http://localhost:3535/api/form/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          import.meta.env.VITE_API_URL + "/api/form/submit",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
         const result = await response.json();
         console.log("Success:", result);
 

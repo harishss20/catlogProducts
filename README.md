@@ -2,11 +2,9 @@
   
 </p>
 <p align="center">
-    <h1 align="center">CATLOGPRODUCTS</h1>
+    <h1 align="center">Catalog Products</h1>
 </p>
-<p align="center">
-    <em><code>❯ REPLACE-ME</code></em>
-</p>
+
 <p align="center">
 	<img src="https://img.shields.io/github/license/harishss20/catlogProducts?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/harishss20/catlogProducts?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
@@ -20,17 +18,19 @@
 	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
 	<img src="https://img.shields.io/badge/.ENV-ECD53F.svg?style=flat&logo=dotenv&logoColor=black" alt=".ENV">
 	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat&logo=HTML5&logoColor=white" alt="HTML5">
-	
-	<img src="https://img.shields.io/badge/Autoprefixer-DD3735.svg?style=flat&logo=Autoprefixer&logoColor=white" alt="Autoprefixer">
-	<img src="https://img.shields.io/badge/styledcomponents-DB7093.svg?style=flat&logo=styled-components&logoColor=white" alt="styledcomponents">
-	<img src="https://img.shields.io/badge/Nodemon-76D04B.svg?style=flat&logo=Nodemon&logoColor=white" alt="Nodemon">
+ <img src="https://img.shields.io/badge/Nodemon-76D04B.svg?style=flat&logo=Nodemon&logoColor=white" alt="Nodemon">
 	<br>
 	<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=flat&logo=Vite&logoColor=white" alt="Vite">
 	<img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat&logo=React&logoColor=black" alt="React">
 	<img src="https://img.shields.io/badge/Axios-5A29E4.svg?style=flat&logo=Axios&logoColor=white" alt="Axios">
-	<img src="https://img.shields.io/badge/ESLint-4B32C3.svg?style=flat&logo=ESLint&logoColor=white" alt="ESLint">
-	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
+ 	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
 	<img src="https://img.shields.io/badge/Express-000000.svg?style=flat&logo=Express&logoColor=white" alt="Express">
+
+
+	
+	
+	
+	
 </p>
 
 <br>
@@ -40,13 +40,6 @@
 - [ Overview](#-overview)
 - [ Features](#-features)
 - [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-    - [ Prerequisites](#-prerequisites)
-    - [ Installation](#-installation)
-    - [ Usage](#-usage)
-    - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
 - [ Contributing](#-contributing)
 - [ License](#-license)
 - [ Acknowledgments](#-acknowledgments)
@@ -55,13 +48,20 @@
 
 ##  Overview
 
-<code>❯ REPLACE-ME</code>
+
+This is a MERN stack project for managing a milk agency. The system allows customers to submit new customer requests, view the product catalog, and allows the admin to log in and see customer details.
+
 
 ---
 
 ##  Features
 
-<code>❯ REPLACE-ME</code>
+
+- **Customer Request Form**: Allows new customers to submit a request to join the service.
+- **Product List**: Displays all the available products to the user.
+- **Admin Dashboard**: Admin can log in to view the list of new customer requests and product information.
+- **Real-Time Update**: Both the product catalog and customer requests are updated in real-time.
+  
 
 ---
 
@@ -96,154 +96,6 @@
 
 ---
 
-##  Modules
-
-<details closed><summary>client</summary>
-
-| File | Summary |
-| --- | --- |
-| [postcss.config.js](https://github.com/harishss20/catlogProducts/blob/main/client/postcss.config.js) | <code>❯ REPLACE-ME</code> |
-| [package-lock.json](https://github.com/harishss20/catlogProducts/blob/main/client/package-lock.json) | <code>❯ REPLACE-ME</code> |
-| [tailwind.config.js](https://github.com/harishss20/catlogProducts/blob/main/client/tailwind.config.js) | <code>❯ REPLACE-ME</code> |
-| [vite.config.js](https://github.com/harishss20/catlogProducts/blob/main/client/vite.config.js) | <code>❯ REPLACE-ME</code> |
-| [package.json](https://github.com/harishss20/catlogProducts/blob/main/client/package.json) | <code>❯ REPLACE-ME</code> |
-| [index.html](https://github.com/harishss20/catlogProducts/blob/main/client/index.html) | <code>❯ REPLACE-ME</code> |
-| [eslint.config.js](https://github.com/harishss20/catlogProducts/blob/main/client/eslint.config.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>client.src</summary>
-
-| File | Summary |
-| --- | --- |
-| [index.css](https://github.com/harishss20/catlogProducts/blob/main/client/src/index.css) | <code>❯ REPLACE-ME</code> |
-| [App.css](https://github.com/harishss20/catlogProducts/blob/main/client/src/App.css) | <code>❯ REPLACE-ME</code> |
-| [App.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/App.jsx) | <code>❯ REPLACE-ME</code> |
-| [main.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/main.jsx) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>client.src.components</summary>
-
-| File | Summary |
-| --- | --- |
-| [Admin.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/Admin.jsx) | <code>❯ REPLACE-ME</code> |
-| [ErrorPage.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/ErrorPage.jsx) | <code>❯ REPLACE-ME</code> |
-| [Navbar.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/Navbar.jsx) | <code>❯ REPLACE-ME</code> |
-| [Header.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/Header.jsx) | <code>❯ REPLACE-ME</code> |
-| [DashBoard.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/DashBoard.jsx) | <code>❯ REPLACE-ME</code> |
-| [ProductCard.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/ProductCard.jsx) | <code>❯ REPLACE-ME</code> |
-| [UserForm.jsx](https://github.com/harishss20/catlogProducts/blob/main/client/src/components/UserForm.jsx) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>server</summary>
-
-| File | Summary |
-| --- | --- |
-| [package-lock.json](https://github.com/harishss20/catlogProducts/blob/main/server/package-lock.json) | <code>❯ REPLACE-ME</code> |
-| [.env](https://github.com/harishss20/catlogProducts/blob/main/server/.env) | <code>❯ REPLACE-ME</code> |
-| [index.js](https://github.com/harishss20/catlogProducts/blob/main/server/index.js) | <code>❯ REPLACE-ME</code> |
-| [package.json](https://github.com/harishss20/catlogProducts/blob/main/server/package.json) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>server.model</summary>
-
-| File | Summary |
-| --- | --- |
-| [user.model.js](https://github.com/harishss20/catlogProducts/blob/main/server/model/user.model.js) | <code>❯ REPLACE-ME</code> |
-| [ecom.model1.js](https://github.com/harishss20/catlogProducts/blob/main/server/model/ecom.model1.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>server.lib</summary>
-
-| File | Summary |
-| --- | --- |
-| [db.js](https://github.com/harishss20/catlogProducts/blob/main/server/lib/db.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>server.router</summary>
-
-| File | Summary |
-| --- | --- |
-| [user.router.js](https://github.com/harishss20/catlogProducts/blob/main/server/router/user.router.js) | <code>❯ REPLACE-ME</code> |
-| [Admin.router.js](https://github.com/harishss20/catlogProducts/blob/main/server/router/Admin.router.js) | <code>❯ REPLACE-ME</code> |
-| [ecom.router.js](https://github.com/harishss20/catlogProducts/blob/main/server/router/ecom.router.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>server.controller</summary>
-
-| File | Summary |
-| --- | --- |
-| [ecom.controller.js](https://github.com/harishss20/catlogProducts/blob/main/server/controller/ecom.controller.js) | <code>❯ REPLACE-ME</code> |
-| [user.controller.js](https://github.com/harishss20/catlogProducts/blob/main/server/controller/user.controller.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>server.controller.Middleware</summary>
-
-| File | Summary |
-| --- | --- |
-| [authAdmin.js](https://github.com/harishss20/catlogProducts/blob/main/server/controller/Middleware/authAdmin.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
----
-
-##  Getting Started
-
-###  Prerequisites
-
-**JavaScript**: `version x.y.z`
-
-###  Installation
-
-Build the project from source:
-
-1. Clone the catlogProducts repository:
-```sh
-❯ git clone https://github.com/harishss20/catlogProducts
-```
-
-2. Navigate to the project directory:
-```sh
-❯ cd catlogProducts
-```
-
-3. Install the required dependencies:
-```sh
-❯ npm install
-```
-
-###  Usage
-
-To run the project, execute the following command:
-
-```sh
-❯ node app.js
-```
-
-###  Tests
-
-Execute the test suite using the following command:
-
-```sh
-❯ npm test
-```
-
----
-
-##  Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
 
 ##  Contributing
 
@@ -290,14 +142,3 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ---
 
-##  License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----

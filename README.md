@@ -42,7 +42,7 @@
 - [ Repository Structure](#-repository-structure)
 - [ Contributing](#-contributing)
 - [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
+
 
 ---
 
